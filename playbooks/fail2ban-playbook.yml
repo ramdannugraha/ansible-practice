@@ -1,4 +1,8 @@
+---
 - hosts: fail2ban
+  vars:
+    sudo: yes
+
   tasks:
-    - name: run echo command
-      command: /bin/echo hellow world
+    - name: install fail2ban
+      apt: name=fail2ban update_cache=yes state=latest
