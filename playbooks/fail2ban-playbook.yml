@@ -1,8 +1,7 @@
 ---
 - hosts: fail2ban
-  vars:
-    sudo: yes
 
   tasks:
     - name: install fail2ban
+      sudo: yes
       apt: name=fail2ban update_cache=yes state=latest
