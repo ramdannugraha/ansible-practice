@@ -1,0 +1,4 @@
+- hosts: fail2ban
+  tasks:
+    - name: run echo command
+      command: /bin/echo hellow world
